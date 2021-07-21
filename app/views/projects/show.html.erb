@@ -4,13 +4,13 @@
     <h2 class='card-title d-flex justify-content-between mb-4'>
       <span><%= @project.name %></span>
       <div>
-        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-light' %>
-        <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark' %>
+        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-dark' %>
+        <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light' %>
       </div>
     </h2>
 
     <div class='mb-4'>
-      <h6>Add task</h6>
+      <h6>Add new task</h6>
       <%= form_with(model: [@task.project, @task]) do |f| %>
         <% if @task.errors.any? %>
           <div id="error_explanation">
@@ -36,6 +36,10 @@
 
     </div>
 
+    <br>
+    <hr>
+    <br>
+
     <h4>Tasks</h4>
     <% @project.tasks.each do |task| %>
       <% if task.persisted? %>
@@ -44,8 +48,8 @@
             <div class='d-flex justify-content-between'>
               <span class="badge bg-<%= task.badge_color %> mb-3"><%= task.status %></span>
               <div>
-                <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' %>
-                <%= link_to 'Destroy', [task.project, task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark btn-sm' %>
+                <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-dark btn-sm' %>
+                <%= link_to 'Delete', [task.project, task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light btn-sm' %>
               </div>
             </div>
 

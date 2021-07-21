@@ -36,12 +36,12 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "destroying a Project" do
+  test "deleting a Project" do
     visit projects_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "Delete", match: :first
     end
 
-    assert_text "Project was successfully destroyed"
+    assert_text "Project was successfully deleted"
   end
 end
