@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+This is a simple project management app that allows users create projects and
+keep track of progress with tasks. 
 
-Things you may want to cover:
+I built this app to learn Ruby on Rails by following then expanding on 
+[this YouTube tutorial](https://www.youtube.com/watch?v=u2o_new-T0o). 
 
-* Ruby version
+## Features 
+- Create and Login To An Account
+- Create Projects
+- Add Tasks to Projects 
+- Edit and delete existing Projects and Tasks 
+- Keep track of Project status with automatic tags as well as a counter for
+% tasks completed 
 
-* System dependencies
+![Demo](/app/assets/images/demo.gif)
 
-* Configuration
+## Technologies
+Languages:
+- Ruby
+- HTML
+- CSS
 
-* Database creation
+Frameworks & Libraries:
+- Rails
+- Bootstrap 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Database:
+ - SQLite
